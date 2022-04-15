@@ -10,9 +10,7 @@ class simuladorDeDados:
     resposta = input(self.mensagem).lower()
     try:
       if resposta == 's':
-        number = self.quant()
-        for n in range(number):
-          print(f'Dado {n+1}: {self.rodarDado()}.')
+        print(f'Dado: {self.rodarDado()}.')
       elif resposta == 'n':
         print('Encerrando.')
       else:
@@ -22,10 +20,6 @@ class simuladorDeDados:
 
   def rodarDado(self):
     return randint(self.minimo, self.maximo)
-
-  def quant(self):
-    number = int(input('Quantos dados deseja rodar: '))
-    return number
 
 a = simuladorDeDados()
 a.start()
