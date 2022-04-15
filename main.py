@@ -18,13 +18,16 @@ class simuladorDeDados:
       else:
         print('Insira uma resposta válida!')
     except:
-      print('Ocorreu um erro ao processar as informações.')
+      print('Ocorreu um erro ao processar sua opção.')
 
   def rodarDado(self):
     return randint(self.minimo, self.maximo)
 
   def quant(self):
-    number = int(input('Quantos dados deseja rodar: '))
+    try:
+      number = int(input('Quantos dados deseja rodar: '))
+    except:
+      print('Erro ao processar número de dados!')
     return number
 
 a = simuladorDeDados()
